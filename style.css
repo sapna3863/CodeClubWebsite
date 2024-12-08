@@ -7,13 +7,19 @@
     --soft-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     --hover-transition: all 0.3s ease-in-out;
 }
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: 'Inter', 'Roboto', sans-serif;
+    font-family: 'Roboto', 'Montserrat', sans-serif;
     line-height: 1.7;
     color: var(--text-color);
     background-color: var(--background-color);
@@ -21,6 +27,7 @@ body {
     max-width: 100%;
     overflow-x: hidden;
 }
+
 /* Header Styles */
 header {
     position: sticky;
@@ -29,14 +36,13 @@ header {
     box-shadow: var(--soft-shadow);
     background-color: var(--white);
 }
+
 #hero {
     background-image: url('green code.webp');
     background-size: cover;
     background-position: center;
     color: var(--white);
     text-align: center;
-    min-height: 200px;
-    max-height: 250px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -46,7 +52,12 @@ header {
     padding: 1rem;
     background-blend-mode: overlay;
     background-color: rgba(0, 0, 0, 0.5);
+
+    /* Default height */
+    height: 22vh;
+    max-height: 400px;
 }
+
 .hero-content h1 {
     animation: fadeInUp 1.5s ease-out;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -56,23 +67,34 @@ header {
     max-width: 90%;
     letter-spacing: -0.02em;
 }
+
+.hero-content p {
+    color: var(--white);
+    font-size: 1.1rem;
+}
+
+/* Navigation Styles */
 nav {
     background-color: var(--white);
-    padding: 1rem 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 1.5rem 1rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    height: 10vh;
+    max-height: 400px;
 }
+
 nav ul {
     display: flex;
     justify-content: center;
     list-style: none;
-    animation: fadeInUp 1.5s ease-out;
     max-width: 1200px;
     margin: 0 auto;
     flex-wrap: wrap;
 }
+
 nav ul li {
     margin: 0 1rem;
 }
+
 nav ul li a {
     color: var(--primary-color);
     text-decoration: none;
@@ -81,9 +103,11 @@ nav ul li a {
     position: relative;
     padding-bottom: 0.25rem;
 }
+
 nav ul li a:hover {
     color: var(--secondary-color);
 }
+
 nav ul li a::after {
     content: '';
     position: absolute;
@@ -94,10 +118,18 @@ nav ul li a::after {
     background-color: var(--secondary-color);
     transition: var(--hover-transition);
 }
+
 nav ul li a:hover::after {
     width: 100%;
     left: 0;
 }
+
+nav ul li a.active {
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+/* Section Styles */
 .section {
     background-color: var(--white);
     padding: 3rem 1rem;
@@ -107,6 +139,7 @@ nav ul li a:hover::after {
     max-width: 1200px;
     margin: 1rem auto;
 }
+
 .section h2 {
     text-align: center;
     margin-bottom: 2rem;
@@ -114,6 +147,37 @@ nav ul li a:hover::after {
     font-weight: 700;
     letter-spacing: -0.02em;
 }
+
+/* About Section Highlights */
+.highlights {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.highlight {
+    flex: 1 1 calc(50% - 1rem);
+    margin: 0.5rem;
+    padding: 1rem;
+    background-color: var(--background-color);
+    border-radius: 8px;
+}
+
+.highlight h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+/* Calendar and Contact Sections */
+#workshops iframe,
+#contact iframe {
+    width: 100%;
+    max-width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
 /* Gallery Styles */
 .gallery-grid {
     display: grid;
@@ -123,6 +187,7 @@ nav ul li a:hover::after {
     max-width: 1200px;
     margin: 0 auto;
 }
+
 .gallery-image {
     width: 100%;
     height: 250px;
@@ -130,11 +195,14 @@ nav ul li a:hover::after {
     border-radius: 8px;
     transition: var(--hover-transition);
     box-shadow: var(--soft-shadow);
+    cursor: pointer;
 }
+
 .gallery-image:hover {
     transform: scale(1.05);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
+
 /* Footer Styles */
 footer {
     background-color: var(--primary-color);
@@ -142,23 +210,25 @@ footer {
     text-align: center;
     padding: 2rem 1rem;
 }
+
 .social-links {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 1rem;
 }
+
 .social-link {
     color: var(--white);
     margin: 0 1rem;
     text-decoration: none;
-    font-size: 1.5rem;
     transition: var(--hover-transition);
 }
+
 .social-link:hover {
-    transform: scale(1.1);
-    color: rgba(255, 255, 255, 0.8);
+    opacity: 0.8;
 }
+
 /* Modal Styles */
 .modal {
     display: none;
@@ -170,6 +240,7 @@ footer {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
 }
+
 .modal-content {
     max-width: 90%;
     max-height: 80%;
@@ -182,6 +253,7 @@ footer {
     border-radius: 8px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
+
 .close {
     color: var(--white);
     position: absolute;
@@ -191,47 +263,73 @@ footer {
     cursor: pointer;
     transition: var(--hover-transition);
 }
+
 .close:hover {
     transform: scale(1.2);
 }
+
 /* Responsive Design */
 @media screen and (max-width: 768px) {
     #hero {
-        min-height: 180px;
-        max-height: 220px;
+        height: 30vh;
+        min-height: 150px;
+        max-height: 250px;
     }
+
     .hero-content h1 {
         font-size: 2rem;
     }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
     nav ul {
         flex-direction: column;
         align-items: center;
     }
+
     nav ul li {
         margin: 0.5rem 0;
     }
+
     .gallery-grid {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
-    .section {
-        padding: 2rem 0.5rem;
+
+    .highlights {
+        flex-direction: column;
+    }
+
+    .highlight {
+        flex: 1 1 100%;
+        margin: 0.5rem 0;
     }
 }
+
 @media screen and (max-width: 480px) {
     #hero {
-        min-height: 150px;
+        height: 20vh;
+        min-height: 120px;
         max-height: 200px;
     }
+
     .hero-content h1 {
         font-size: 1.75rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+    .hero-content a {
+        font-size: .5rem;
     }
     .gallery-grid {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
-    .section {
-        padding: 1.5rem 0.25rem;
-    }
 }
+
+/* Animations */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -241,29 +339,4 @@ footer {
         opacity: 1;
         transform: translateY(0);
     }
-}
-.flex-container {
-    display: flex;
-    flex-wrap: wrap;
-}
-.flex-item {
-    flex: 1 1 200px;
-}
-@media (max-width: 600px) {
-    .flex-item {
-        flex: 1 1 100%;
-    }
-}
-.flex-item img {
-    width: 100%;
-    height: auto;
-}
-.flex-item p {
-    margin-top: 10px;
-}
-.workshops {
-    place-items: center;
-}
-.contact {
-    place-items: center;
 }

@@ -1,14 +1,17 @@
-// Smooth Scrolling Navigation
-function setupSmoothScrolling() {
-    const navLinks = document.querySelectorAll('nav a');
+document.addEventListener('DOMContentLoaded', function() {
+    // Smooth scrolling for navigation links
+    const navLinks = document.querySelectorAll('nav ul li a');
 
     navLinks.forEach(link => {
-        link.addEventListener('click', event => {
-            event.preventDefault();
-            const targetId = link.getAttribute('href').slice(1);
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            // Get the target section
+            const targetId = this.getAttribute('href').substring(1);
             const targetSection = document.getElementById(targetId);
 
             if (targetSection) {
+                // Smooth scroll to the section
                 targetSection.scrollIntoView({
                     behavior: 'smooth',
                     block: 'start'
@@ -16,41 +19,64 @@ function setupSmoothScrolling() {
             }
         });
     });
-}
 
-// Email Validation Utility
-function validateEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-}
-// Dynamic Image Gallery with Modal
-function setupImageGallery() {
-    const images = document.querySelectorAll('.gallery img');
-    const modal = document.getElementById('fullscreen-modal');
-    const modalImage = document.getElementById('modal-image');
-    const captionText = document.getElementById('caption');
-    const closeButton = modal.querySelector('.close');
+    // Optional: Add active state to current navigation item
+    function setActiveNavItem() {
+        const scrollPosition = window.scrollY;
 
-    images.forEach(img => {
-        img.classList.add('gallery-image');
-        img.addEventListener('click', () => {
+        navLinks.forEach(link => {
+            const targetId = link.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+
+            if (targetSection) {
+                const sectionTop = targetSection.offsetTop;
+                const sectionHeight = targetSection.offsetHeight;
+
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    link.classList.add('active');
+                }
+            }
+        });
+    }
+
+    window.addEventListener('scroll', setActiveNavItem);
+
+    // Image Modal Functionality
+    const modal = document.getElementById('modal');
+    const modalImg = document.getElementById('modal-image');
+    const closeBtn = document.querySelector('.close');
+    const galleryImages = document.querySelectorAll('.gallery-image');
+
+    galleryImages.forEach(img => {
+        img.addEventListener('click', function() {
             modal.style.display = 'block';
-            modalImage.src = img.src;
-            captionText.textContent = img.alt;
+            modalImg.src = this.src;
         });
     });
 
-    // Close modal on close button click
-    closeButton.addEventListener('click', () => {
+    closeBtn.addEventListener('click', function() {
         modal.style.display = 'none';
     });
 
-    // Close modal when clicking outside the image
-    modal.addEventListener('click', (event) => {
-        if (event.target === modal) {
+    // Close modal if clicked outside the image
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
             modal.style.display = 'none';
         }
     });
+});
+// Close modal on close button click
+closeButton.addEventListener('click', () => {
+    modal.style.display = 'none';
+});
+
+// Close modal when clicking outside the image
+modal.addEventListener('click', (event) => {
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
+});
 }
 
 // Section Visibility Animation
