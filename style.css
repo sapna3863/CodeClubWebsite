@@ -49,37 +49,39 @@ header {
     align-items: center;
     overflow: hidden;
     position: relative;
-    padding: 1rem;
+    padding: 0.5rem;
     background-blend-mode: overlay;
     background-color: rgba(0, 0, 0, 0.5);
 
-    /* Default height */
-    height: 22vh;
-    max-height: 400px;
+    /* Condensed height */
+    height: 15vh;
+    min-height: 100px;
+    max-height: 250px;
 }
 
 .hero-content h1 {
     animation: fadeInUp 1.5s ease-out;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
     max-width: 90%;
     letter-spacing: -0.02em;
 }
 
 .hero-content p {
     color: var(--white);
-    font-size: 1.1rem;
+    font-size: 0.9rem;
 }
 
 /* Navigation Styles */
 nav {
     background-color: var(--white);
-    padding: 1.5rem 1rem;
+    padding: 1rem;
     border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-    height: 10vh;
-    max-height: 400px;
+    height: 8vh;
+    min-height: 70px;
+    max-height: 100px;
 }
 
 nav ul {
@@ -89,10 +91,11 @@ nav ul {
     max-width: 1200px;
     margin: 0 auto;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 nav ul li {
-    margin: 0 1rem;
+    margin: 0 0.5rem;
 }
 
 nav ul li a {
@@ -271,26 +274,28 @@ footer {
 /* Responsive Design */
 @media screen and (max-width: 768px) {
     #hero {
-        height: 30vh;
-        min-height: 150px;
-        max-height: 250px;
+        height: 15vh;
+        min-height: 90px;
+        max-height: 200px;
     }
 
     .hero-content h1 {
-        font-size: 2rem;
+        font-size: 1.75rem;
     }
 
     .hero-content p {
-        font-size: 1rem;
+        font-size: 0.85rem;
     }
 
     nav ul {
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
         align-items: center;
     }
 
     nav ul li {
-        margin: 0.5rem 0;
+        margin: 0.5rem 0.5rem;
     }
 
     .gallery-grid {
@@ -309,21 +314,34 @@ footer {
 
 @media screen and (max-width: 480px) {
     #hero {
-        height: 20vh;
-        min-height: 120px;
-        max-height: 200px;
+        height: 12vh;
+        min-height: 80px;
+        max-height: 150px;
     }
 
     .hero-content h1 {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
     }
 
     .hero-content p {
+        font-size: 0.8rem;
+    }
+
+    nav {
+        height: 6vh;
+        min-height: 60px;
+        padding: 0.5rem;
+    }
+
+    nav ul li {
+        margin: 0 0.25rem;
         font-size: 0.9rem;
     }
+
     .hero-content a {
         font-size: .5rem;
     }
+
     .gallery-grid {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
@@ -338,5 +356,75 @@ footer {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+/* About Section Layout */
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 0 0 250px;
+}
+
+.profile-image-container {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid var(--primary-color);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.profile-image-container:hover {
+    transform: scale(1.05);
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-section h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
+    font-size: 1.5rem;
+}
+
+.profile-title {
+    color: var(--secondary-color);
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.profile-description {
+    flex: 1;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-section {
+        margin-bottom: 1rem;
+    }
+
+    .profile-image-container {
+        width: 200px;
+        height: 200px;
     }
 }
