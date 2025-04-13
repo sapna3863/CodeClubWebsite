@@ -38,7 +38,6 @@ header {
 }
 
 #hero {
-    background-image: url('green code.webp');
     background-size: cover;
     background-position: center;
     color: var(--white);
@@ -51,7 +50,7 @@ header {
     position: relative;
     padding: 0.5rem;
     background-blend-mode: overlay;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: var(--primary-color);
 
     /* Condensed height */
     height: 15vh;
@@ -245,7 +244,7 @@ footer {
 }
 
 .modal-content {
-    max-width: 90%;
+    max-width: 90%
     max-height: 80%;
     margin: auto;
     display: block;
@@ -427,4 +426,190 @@ footer {
         width: 200px;
         height: 200px;
     }
+}
+/* What We Use Section Styles */
+#what-we-use {
+  background-color: #f4f4f9;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+#what-we-use h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#what-we-use p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.tools-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 0 10px;
+}
+
+.tool {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tool:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.tool h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.tool p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  color: #666;
+}
+/* General Colors */
+:root {
+  --primary-color: #4a90e2; /* Soft Blue */
+  --secondary-color: #f4f4f9; /* Light Gray */
+  --text-color: #333; /* Dark Text */
+  --highlight-color: #ffffff; /* White for contrast */
+}
+
+/* Library Section */
+#library {
+  background-color: var(--secondary-color);
+  padding: 40px 20px;
+  text-align: center;
+}
+
+#library h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+#library p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+#library a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+#library a:hover {
+  text-decoration: underline;
+}
+
+/* FAQs Section */
+#faqs {
+  background-color: var(--secondary-color);
+  padding: 40px 20px;
+}
+
+#faqs h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.faq-item {
+  background-color: var(--highlight-color);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.faq-item h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4rem;
+  color: var(--primary-color);
+}
+
+.faq-answer {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  color: #666;
+  display: none;
+  margin-top: 10px;
+}
+
+/* Workshops Section */
+#workshops {
+  background-color: var(--secondary-color);
+  padding: 40px 20px;
+  text-align: center;
+}
+
+#workshops h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+#workshops p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+#workshops .section-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#workshops .section-content p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #666;
+}
+
+/* Section Headings (General) */
+.section h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+/* Hover effects for all clickable elements */
+a:hover,
+.faq-item:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+  cursor: pointer;
 }

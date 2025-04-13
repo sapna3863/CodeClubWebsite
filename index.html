@@ -1,106 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code Club - Otto Bruyns Public Library</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Code Club - Otto Bruyns Public Library</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Montserrat:wght@700&display=swap" rel="stylesheet"/>
 </head>
 <body>
-    <header>
-        <section id="hero">
-            <div class="hero-content">
-                <h1>Code Club 🤖</h1>
-                <p>Empowering the next generation of tech innovators</p>
+  <header>
+    <section id="hero">
+      <div class="hero-content">
+        <h1>Code Club 🤖</h1>
+        <p>Empowering the next generation of tech innovators</p>
+      </div>
+    </section>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#workshops">Workshops</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#library">Library Info</a></li>
+        <li><a href="#faqs">FAQs</a></li>
+        <li><a href="#instagram">Instagram</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about" class="section">
+      <h2>About Code Club</h2>
+      <div class="section-content">
+        <div class="about-container">
+          <div class="profile-section">
+            <div class="profile-image-container">
+              <img src="pfp.jpg" alt="Sapna Patel" class="profile-image">
             </div>
-        </section>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#workshops">Workshops</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section id="about" class="section">
-            <h2>About Code Club</h2>
-            <div class="section-content">
-                <div class="about-container">
-                    <div class="profile-section">
-                        <div class="profile-image-container">
-                            <img src="pfp.jpg" alt="Sapna Patel" class="profile-image">
-                        </div>
-                        <h3>Sapna Patel</h3>
-                        <p class="profile-title">Founder, Code Club</p>
-                    </div>
-                    <div class="profile-description">
-                        <p>Hi, I'm Sapna Patel, the founder of Code Club at the Otto Bruyns Public Library and a high school student with a passion for technology and education. After coding at my local library since elementary school, I started Code Club to share my love for STEM and make coding accessible to middle and high school students from all backgrounds. Through engaging workshops, hands-on learning, and community events, I strive to inspire creativity, collaboration, and problem-solving in the next generation of innovators. I even coded this website myself! </p>
-
-                        <div class="highlights">
-                            <div class="highlight">
-                                <h3>Weekly Workshops</h3>
-                                <p>Hands-on sessions on programming, robotics, and web development. Learn to use current day computer chips (Microbits, Ardunio Uno, Jimu) and coding languages (HTML, CSS, Scratch, Javascript, Java, Microsoft MakeCode). </p>
-                            </div>
-                            <div class="highlight">
-                                <h3>Community Engagement</h3>
-                                <p>For all students K - 12! All students from all different academic background welcome. Connected with over 1,400 individuals monthly through social media and grants.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <h3>Sapna Patel</h3>
+            <p class="profile-title">Founder, Code Club</p>
+          </div>
+          <div class="profile-description">
+            <p>Hi, I'm Sapna Patel, the founder of Code Club at the Otto Bruyns Public Library and a high school student with a passion for technology and education. After coding at my local library since elementary school, I started Code Club to share my love for STEM and make coding accessible to middle and high school students from all backgrounds. Through engaging workshops, hands-on learning, and community events, I strive to inspire creativity, collaboration, and problem-solving in the next generation of innovators. I even coded this website myself!</p>
+            <div class="highlights">
+              <div class="highlight">
+                <h3>Weekly Workshops</h3>
+                <p>Hands-on sessions on programming, robotics, and web development. Learn to use current day computer chips (Microbits, Ardunio Uno, Jimu) and coding languages (HTML, CSS, Scratch, Javascript, Java, Microsoft MakeCode).</p>
+              </div>
+              <div class="highlight">
+                <h3>Community Engagement</h3>
+                <p>For all students K - 12! All students from all different academic backgrounds welcome. Connected with over 1,400 individuals monthly through social media and grants.</p>
+              </div>
             </div>
-        </section>
-
-        <section id="gallery" class="section">
-            <h2>Gallery</h2>
-            <div class="gallery-grid">
-                <img src="Hot Potato Project.jpeg" alt="Code Club Activity" class="gallery-image">
-                <img src="Makerspace.jpeg" alt="Code Club Workshop" class="gallery-image">
-                <img src="Jimu.jpeg" alt="Students coding" class="gallery-image">
-                <img src="Electric Guitars.jpeg" alt="Students coding" class="gallery-image">
-                 <img src="Image (1).jpg" alt="Students coding" class="gallery-image">
-                 <img src="Image (2).jpg" alt="Students coding" class="gallery-image">
-                 <img src="12-20.jpeg" alt="Students coding" class="gallery-image">
-                 <img src="12-21.jpeg" alt="Students coding" class="gallery-image">
-            </div>
-        </section>
-
-        <section class = "section">
-        <section id="workshops" class="workshops">
-            <h2>Calendar</h2>
-            <iframe src="https://calendar.google.com/calendar/embed?height=500&wkst=1&ctz=America%2FNew_York&showPrint=0&src=OWI5NjZjOWE3OTMwYWQ2YjA0YmFmNTc5ZGYwMjFiZTg5OTdhMzIxMWQ2YThhYWRmNDc5MTRmMzRjYjNkMWQ0YUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23E4C441" style="border:solid 1px #777" width="500" height="500" frameborder="0" scrolling="no"></iframe>
-        </section>
-        </section>
-
-        <section class = "section">
-        <section id="contact" class="contact">
-            <h2> Contact Me! </h2>
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd6mf5mREDhkKBDwa7p9E6hnNgd8N2_S_1BGUCqYfU8Oax-cw/viewform?embedded=true" width="640" height="718" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-        </section>
-            </section>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2024 Code Club - Sapna Patel</p>
-            <div class="social-links">
-                <a href="#" class="social-link">Facebook</a>
-                <a href="#" class="social-link">Twitter</a>
-                <a href="#" class="social-link">LinkedIn</a>
-            </div>
+          </div>
         </div>
-    </footer>
+      </div>
+    </section>
 
-    <div id="modal" class="modal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="modal-image">
-        <div id="modal-caption"></div>
+    <section id="workshops" class="section">
+      <h2>Workshops</h2>
+      <p>Our weekly workshops are interactive and engaging. We have workshops every Saturday at the Northfield library from 2:30 - 4:00 pm! Scroll below to see photos of our work and stay tuned for updates on upcoming sessions and project showcases!</p>
+    </section>
+    <section id="what-we-use" class="section">
+      <h2>What We Use</h2>
+      <p>At Code Club, we provide students with the latest tools to help them learn and create. Here are some of the resources we use in our workshops:</p>
+      <div class="tools-container">
+        <div class="tool">
+          <h3>Scratch</h3>
+          <p>A beginner-friendly programming language where students can create interactive stories, games, and animations.</p>
+        </div>
+        <div class="tool">
+          <h3>Microbits</h3>
+          <p>A small, programmable computer used to teach students about electronics and coding through hands-on projects.</p>
+        </div>
+        <div class="tool">
+          <h3>Jimu Robots</h3>
+          <p>Robotics kits that allow students to build and program their own robots, encouraging problem-solving and engineering skills.</p>
+        </div>
+        <div class="tool">
+          <h3>Microsoft MakeCode</h3>
+          <p>A block-based programming platform that makes it easy for students to get started with coding and create their own interactive projects.</p>
+        </div>
+        <div class="tool">
+          <h3>Arduino Uno</h3>
+          <p>A popular open-source electronics platform that enables students to build everything from simple circuits to complex robotic systems.</p>
+        </div>
+        <div class="tool">
+          <h3>JavaScript</h3>
+          <p>One of the most widely used programming languages, essential for building websites and developing interactive content.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section">
+      <h2>Gallery</h2>
+      <div class="gallery-grid">
+        <img src="Hot Potato Project.jpeg" alt="Code Club Activity" class="gallery-image">
+        <img src="Makerspace.jpeg" alt="Code Club Workshop" class="gallery-image">
+        <img src="Jimu.jpeg" alt="Students coding" class="gallery-image">
+        <img src="Electric Guitars.jpeg" alt="Students coding" class="gallery-image">
+        <img src="Image (1).jpg" alt="Students coding" class="gallery-image">
+        <img src="Image (2).jpg" alt="Students coding" class="gallery-image">
+        <img src="12-20.jpeg" alt="Students coding" class="gallery-image">
+        <img src="12-21.jpeg" alt="Students coding" class="gallery-image">
+      </div>
+    </section>
+
+    <section id="library" class="section">
+      <h2>Otto Bruyns Public Library</h2>
+      <p><strong>Address:</strong> 241 W. Mill Rd, Northfield, NJ 08225</p>
+      <p><strong>Phone:</strong> (609) 646-4476</p>
+      <p><strong>Website:</strong> <a href="https://www.ottnj.org/" target="_blank">https://www.nflibrary.org/</a></p>
+    </section>
+
+    <!-- ✅ FAQ Dropdown -->
+    <section id="faqs" class="section">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <h3>Who can join?</h3>
+        <div class="faq-answer" style="display: none;">
+          <p>All students from grades K–12 are welcome, regardless of experience level!</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <h3>Do I need my own laptop?</h3>
+        <div class="faq-answer" style="display: none;">
+          <p>If you can bring your own laptop it is appreciated. But if not, we have a limited number of desktops.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <h3>How much does it cost?</h3>
+        <div class="faq-answer" style="display: none;">
+          <p>It’s completely free — thanks to library grants and community support.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Instagram Embed -->
+    <section id="instagram" class="section">
+      <h2>Follow Us on Instagram</h2>
+      <div style="max-width: 100%; overflow: hidden;">
+        <script src="https://snapwidget.com/js/snapwidget.js"></script>
+        <iframe src="https://snapwidget.com/embed/1093246" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:100%; height:500px;" title="Follow our Instagram at @code_club_northfield!"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2024 Code Club - Sapna Patel</p>
+      <div class="social-links">
+        <a href="https://facebook.com" class="social-link" target="_blank">Facebook</a>
+        <a href="https://twitter.com" class="social-link" target="_blank">Twitter</a>
+        <a href="https://linkedin.com" class="social-link" target="_blank">LinkedIn</a>
+      </div>
     </div>
+  </footer>
 
-    <script src="script.js"></script>
+  <div id="modal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modal-image" />
+    <div id="modal-caption"></div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
