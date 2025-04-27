@@ -1,15 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-  // Parallax effect
-  window.addEventListener('scroll', () => {
-    const layers = document.querySelectorAll('.layer');
-    const scrolled = window.pageYOffset;
-    
-    layers.forEach(layer => {
-      const speed = layer.getAttribute('data-speed');
-      const yPos = -(scrolled * speed);
-      layer.style.transform = `translate3d(0, ${yPos}px, 0)`;
-    });
-  });
   // Smooth scroll
   const navLinks = document.querySelectorAll('nav ul li a');
   navLinks.forEach(link => {
