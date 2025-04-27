@@ -67,9 +67,9 @@ nav {
 .hero-logo {
     width: 150px;
     height: auto;
-    margin-bottom: 20px;
+    margin: 0 auto 20px;
+    display: block;
     animation: fadeInUp 1.5s ease-out;
-    align: center;
 }
 
 .hero-content h1 {
@@ -77,8 +77,9 @@ nav {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     font-size: 7rem;
     font-weight: 700;
-    margin-bottom: 0.25rem;
+    margin: 0 auto 0.25rem;
     max-width: 90%;
+    text-align: center;
 }
 
 .hero-content p {
