@@ -61,6 +61,7 @@ nav {
     height: 100vh;
     min-height: 100vh;
     max-height: none;
+    animation: zoomIn 1.5s ease-out;
 }
 
 .hero-content h1 {
@@ -362,6 +363,29 @@ footer {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(1.1);
+        filter: brightness(0);
+    }
+    to {
+        transform: scale(1);
+        filter: brightness(1);
+    }
+}
+
+@keyframes typewriter {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+.hero-content p {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typewriter 2s steps(40) 1s forwards;
+    width: 0;
 }
 /* About Section Layout */
 .about-container {
