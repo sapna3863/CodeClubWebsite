@@ -30,11 +30,16 @@ body {
 
 /* Header Styles */
 header {
+    position: relative;
+    z-index: 100;
+    background-color: var(--white);
+}
+
+nav {
     position: sticky;
     top: 0;
     z-index: 100;
     box-shadow: var(--soft-shadow);
-    background-color: var(--white);
 }
 
 #hero {
