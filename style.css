@@ -38,8 +38,10 @@ header {
 }
 
 #hero {
+    background-image: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1920&q=80');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     color: var(--white);
     text-align: center;
     display: flex;
@@ -50,12 +52,12 @@ header {
     position: relative;
     padding: 0.5rem;
     background-blend-mode: overlay;
-    background-color: var(--primary-color);
+    background-color: rgba(0, 97, 79, 0.8);
 
-    /* Condensed height */
-    height: 15vh;
-    min-height: 100px;
-    max-height: 250px;
+    /* Increased height for better parallax effect */
+    height: 30vh;
+    min-height: 200px;
+    max-height: 400px;
 }
 
 .hero-content h1 {
