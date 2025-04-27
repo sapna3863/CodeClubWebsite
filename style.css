@@ -69,6 +69,7 @@ nav {
     height: auto;
     margin-bottom: 20px;
     animation: fadeInUp 1.5s ease-out;
+    align: center;
 }
 
 .hero-content h1 {
@@ -78,7 +79,6 @@ nav {
     font-weight: 700;
     margin-bottom: 0.25rem;
     max-width: 90%;
-    letter-spacing: -0.02em;
 }
 
 .hero-content p {
