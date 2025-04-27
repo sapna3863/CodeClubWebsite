@@ -442,7 +442,7 @@ footer {
 }
 
 .profile-title {
-    color: var(--secondary-color);
+    color: var(--primary-color);
     font-style: italic;
     margin-bottom: 1rem;
 }
@@ -516,14 +516,14 @@ footer {
   font-family: 'Montserrat', sans-serif;
   font-size: 2rem;
   font-weight: 700;
-  color: #333;
+  color: var(--primary-color);
   margin-bottom: 20px;
 }
 
 #what-we-use p {
   font-family: 'Roboto', sans-serif;
   font-size: 1.2rem;
-  color: #555;
+  color: var(#333);
   margin-bottom: 30px;
 }
 
