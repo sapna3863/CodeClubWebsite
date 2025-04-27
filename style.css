@@ -53,11 +53,9 @@ header {
     padding: 0.5rem;
     background-blend-mode: overlay;
     background-color: rgba(0, 97, 79, 0.8);
-
-    /* Increased height for better parallax effect */
-    height: 30vh;
-    min-height: 200px;
-    max-height: 400px;
+    height: 100vh;
+    min-height: 100vh;
+    max-height: none;
 }
 
 .hero-content h1 {
