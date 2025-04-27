@@ -384,8 +384,8 @@ footer {
 .hero-content p {
     overflow: hidden;
     white-space: nowrap;
+    width: 0%;
     animation: typewriter 2s steps(40) 1s forwards;
-    width: 0;
     font-size: clamp(1.5rem, 4vw, 3rem);
     max-width: 100%;
 }
