@@ -46,7 +46,7 @@ nav {
     background-image: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1920&q=80');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: scroll;
     color: var(--white);
     text-align: center;
     display: flex;
@@ -55,10 +55,10 @@ nav {
     align-items: center;
     overflow: hidden;
     position: relative;
-    padding: 0.5rem;
+    padding: 2rem 1rem;
     background-blend-mode: overlay;
     background-color: rgba(0, 97, 79, 0.8);
-    height: 100vh;
+    height: auto;
     min-height: 100vh;
     max-height: none;
     animation: zoomIn 1.5s ease-out;
@@ -288,17 +288,21 @@ footer {
 /* Responsive Design */
 @media screen and (max-width: 768px) {
     #hero {
-        height: 15vh;
-        min-height: 90px;
-        max-height: 200px;
+        min-height: auto;
+        padding: 4rem 1rem;
     }
 
     .hero-content h1 {
-        font-size: 1.75rem;
+        font-size: 3rem;
     }
 
     .hero-content p {
-        font-size: 0.85rem;
+        font-size: 1.5rem;
+    }
+
+    .hero-logo {
+        width: 100px;
+        margin-bottom: 1rem;
     }
 
     nav ul {
@@ -328,17 +332,20 @@ footer {
 
 @media screen and (max-width: 480px) {
     #hero {
-        height: 12vh;
-        min-height: 80px;
-        max-height: 150px;
+        min-height: auto;
+        padding: 3rem 1rem;
     }
 
     .hero-content h1 {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     .hero-content p {
-        font-size: 0.8rem;
+        font-size: 1rem;
+    }
+
+    .hero-logo {
+        width: 80px;
     }
 
     nav {
@@ -724,4 +731,84 @@ a:hover,
   color: var(--primary-color);
   text-decoration: underline;
   cursor: pointer;
+}
+
+/* Quote Section Styles */
+.quote-section {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 4rem 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.quote-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.quote-container blockquote {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.quote-container cite {
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+/* Articles Section Styles */
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.article-card {
+    background: var(--white);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: var(--soft-shadow);
+    transition: transform 0.3s ease;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+}
+
+.article-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.article-date {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+    .quote-container blockquote {
+        font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+    }
+    
+    .articles-grid {
+        grid-template-columns: 1fr;
+    }
 }
