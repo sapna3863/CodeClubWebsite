@@ -47,3 +47,42 @@
     });
   });
 });
+document.addEventListener('DOMContentLoaded', function() {
+    // Add current-page class based on current URL
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const navLinks = document.querySelectorAll('nav a');
+    
+    navLinks.forEach(link => {
+        if (link.getAttribute('href') === currentPage) {
+            link.classList.add('current-page');
+        }
+    });
+    
+    // ... rest of your existing script code
+});
+// ...existing code...
+
+// Contact Form Handling
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value
+            };
+            
+            // Here you would typically send the data to a server
+            console.log('Form submitted:', formData);
+            
+            // Clear form
+            contactForm.reset();
+            alert('Thank you for your message! We will get back to you soon.');
+        });
+    }
+});

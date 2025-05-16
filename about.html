@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/x-icon" href="logo.png"/>
+  <title>Code Club - Otto Bruyns Public Library</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Montserrat:wght@700&display=swap" rel="stylesheet"/>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v22.0"></script>
+</head>
+<body>
+  <header>
+    <section id="hero">
+      <div class="hero-content">
+        <img src="logo.png" alt="Code Club Logo" class="hero-logo">
+        <h1>Code Club</h1>
+        <p>Empowering the next generation of tech innovators</p>
+      </div>
+    </section>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="workshops.html">Workshops</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+    <section id="about" class="section">
+      <h2>About Code Club</h2>
+      <div class="section-content">
+        <div class="about-container">
+          <div class="profile-section">
+            <div class="profile-image-container">
+              <img src="pfp.jpg" alt="Sapna Patel" class="profile-image">
+            </div>
+            <h3>Sapna Patel</h3>
+            <p class="profile-title">Founder, Code Club</p>
+          </div>
+          <div class="profile-description">
+            <p>Hi, I'm Sapna Patel, the founder of Code Club at the Otto Bruyns Public Library and a high school student with a passion for technology and education. After coding at my local library since elementary school, I started Code Club to share my love for STEM and make coding accessible to middle and high school students from all backgrounds. Through engaging workshops, hands-on learning, and community events, we strive to inspire creativity, collaboration, and problem-solving in the next generation of innovators. With the help of generous volunteers across Atlantic County, we strive to teach all K - 12 students how to code! </p>
+            <div class="highlights">
+              <div class="highlight">
+                <h3>Weekly Workshops</h3>
+                <p>Hands-on sessions on programming, robotics, and web development. Learn to use current day computer chips (Microbits, Ardunio Uno, Jimu) and coding languages (HTML, CSS, Scratch, Javascript, Java, Microsoft MakeCode).</p>
+              </div>
+              <div class="highlight">
+                <h3>Community Engagement</h3>
+                <p>For all students K - 12! All students from all different academic backgrounds welcome. We have connected with over 1,400 individuals monthly through social media and taught over 100 different students through our workshops across New Jersey. </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="volunteers" class="section">
+      <h2>Our Volunteers</h2>
+      <div class="volunteers-container">
+        <div class="volunteer-group">
+          <h3>Mainland Regional High School</h3>
+          <p>Students from MRHS in Linwood, New Jersey volunteer their time to help teach students.</p>
+        </div>
+        <div class="volunteer-group">
+          <h3>Key Club</h3>
+          <p>Members of Key Club, a prominent volunteer organization, come to volunteer for Code Club.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ✅ FAQ Dropdown -->
+    <section id="faqs" class="section">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <h3>Who can join?</h3>
+        <div class="faq-answer" style="display: none;">
+          <p>All students from grades K–12 are welcome, regardless of experience level!</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <h3>Do I need my own laptop?</h3>
+        <div class="faq-answer" style="display: none;">
+          <p>If you can bring your own laptop it is appreciated. But if not, we have a limited number of desktops.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <h3>How much does it cost?</h3>
+        <div class="faq-answer" style="display: none;">
+          <p>It’s completely free — thanks to library grants and community support.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="articles" class="section">
+      <h2>Latest Articles</h2>
+      <div class="articles-grid">
+        <article class="article-card">
+            <h3>Mainland Living</h3>
+            <p class="article-date"> February 2025</p>
+            <p>Rockets, Robots, & Readiness to Share: Meet Sapna Patel by Christine D'Alessandro. Learn about Code Club's background and involvement at the Otto Bruyns Public Library.</p>
+           
+            <a href="https://www.facebook.com/MainlandLivingBVM/posts/pfbid02U1dB6vPixtH3dGWzyhhqufuMBkf25jUKujTBKSUndBnpEa7j71CgeSSEt3J21fq2l" data-width="350" data-show-text="true"><blockquote cite="https://www.facebook.com/MainlandLivingBVM/posts/1025566442963771" class="read-more">Read More →</a>
+           <div id="fb-root"></div>
+        </article>
+    
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2024 Code Club - Sapna Patel</p>
+      <div class="social-links">
+        <a href="https://facebook.com" class="social-link" target="_blank">Visit Our Facebook</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="modal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modal-image" />
+    <div id="modal-caption"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
