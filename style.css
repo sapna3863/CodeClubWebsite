@@ -812,3 +812,150 @@ a:hover,
         grid-template-columns: 1fr;
     }
 }
+.resources-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.resource-card {
+    background: var(--white);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: var(--soft-shadow);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.resource-card img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin: 1rem auto;
+    border-radius: 8px;
+}
+
+.resource-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.resource-card h3 a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.resource-card h3 a:hover {
+    color: var(--secondary-color);
+}
+
+.resource-card p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-top: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .resources-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .resource-card {
+        margin: 0 auto;
+        max-width: 400px;
+    }
+}
+.scroll-arrow {
+    position: relative;
+    margin-top: 2rem;
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.scroll-arrow span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    margin-left: -12px;
+    border-left: 3px solid var(--white);
+    border-bottom: 3px solid var(--white);
+    transform: rotate(-45deg);
+    animation: scrollArrow 2s infinite;
+    opacity: 0;
+}
+
+.scroll-arrow span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.scroll-arrow span:nth-child(2) {
+    top: 16px;
+    animation-delay: 0.15s;
+}
+
+.scroll-arrow span:nth-child(3) {
+    top: 32px;
+    animation-delay: 0.3s;
+}
+
+@keyframes scrollArrow {
+    0% {
+        opacity: 0;
+        transform: rotate(-45deg) translate(0, 0);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(-45deg) translate(-20px, 20px);
+    }
+}
+.workshop-banner {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    text-align: center;
+    animation: fadeInUp 0.5s ease-out;
+}
+
+.workshop-banner h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--white);
+}
+
+.workshop-banner p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+@media screen and (max-width: 768px) {
+    .workshop-banner {
+        padding: 1rem;
+    }
+    
+    .workshop-banner h3 {
+        font-size: 1.5rem;
+    }
+    
+    .workshop-banner p {
+        font-size: 1rem;
+    }
+}
