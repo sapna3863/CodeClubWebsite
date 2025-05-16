@@ -1039,3 +1039,72 @@ spaces/CodeClubWebsite/style.css
         padding: 1.5rem;
     }
 }
+.compact-header {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: var(--primary-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.compact-header .spline-container {
+    width: 200px;  /* Increased from 80px */
+    height: 200px; /* Increased from 80px */
+    flex-shrink: 0;
+}
+
+.compact-header h1 {
+    color: var(--white);
+    margin: 0;
+    font-size: 2.5rem;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 1rem;
+}
+
+.compact-header nav {
+    margin-left: auto; /* Pushes nav to the right */
+}
+
+.compact-header nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.compact-header nav a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+    .compact-header {
+        padding: 0.5rem;
+        flex-wrap: wrap;
+    }
+    
+    .compact-header .spline-container {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .compact-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .compact-header nav {
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .compact-header nav ul {
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
