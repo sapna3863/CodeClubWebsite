@@ -1,11 +1,63 @@
 :root {
-    --primary-color: #00614F;
-    --secondary-color: #008C7A;
-    --text-color: #1A1A1A;
+    --primary-color: #4a90e2;    /* Soft Blue */
+    --secondary-color: #36D1DC;   /* Turquoise */
+    --accent-color: #5B86E5;      /* Royal Blue */
+    --gradient-primary: linear-gradient(135deg, #36D1DC 0%, #5B86E5 100%);
+    --text-color: #333333;
     --background-color: #F7F9FA;
     --white: #FFFFFF;
     --soft-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     --hover-transition: all 0.3s ease-in-out;
+}
+
+/* Update hero section */
+#hero {
+    background-image: linear-gradient(rgba(91, 134, 229, 0.9), rgba(54, 209, 220, 0.9)), 
+                      url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1920&q=80');
+}
+
+/* Update buttons and interactive elements */
+.submit-btn, .resource-card:hover,.tool:hover, .workshop-banner {
+  background-image: linear-gradient(135deg, #36D1DC 0%, #5B86E5 100%);
+}
+
+/* Add subtle gradient borders */
+.faq-item, .article-card, .resource-card {
+    border: 1px solid transparent;
+    background-image: linear-gradient(var(--white), var(--white)), 
+                      var(--gradient-primary);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+/* Update navigation hover effects */
+nav ul li a::after {
+    background: var(--secondary-color);
+}
+
+
+/* Update the gradient text effect for headings while maintaining center alignment */
+.section h2.gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-left: auto; /* Add this */
+    margin-right: auto; /* Add this */
+}
+.section h2 {
+      font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-align: center; /* Add this */
+    width: 100%; /* Add this */
+    display: block; /* Change from inline-block to block */
+}
+/* Update quote section */
+.quote-section {
+    background: var(--gradient-primary);
 }
 
 * {
@@ -155,15 +207,9 @@ nav ul li a.active {
     border-radius: 8px;
     max-width: 1200px;
     margin: 1rem auto;
+    align-items: center;
 }
 
-.section h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: var(--primary-color);
-    font-weight: 700;
-    letter-spacing: -0.02em;
-}
 
 /* About Section Highlights */
 .highlights {
@@ -487,6 +533,13 @@ footer {
   gap: 30px;
   padding: 20px;
 }
+#volunteers h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 20px;
+}
 
 .volunteer-group {
   background: #fff;
@@ -576,13 +629,6 @@ footer {
   font-size: 1rem;
   color: #666;
 }
-/* General Colors */
-:root {
-  --primary-color: #4a90e2; /* Soft Blue */
-  --secondary-color: #f4f4f9; /* Light Gray */
-  --text-color: #333; /* Dark Text */
-  --highlight-color: #ffffff; /* White for contrast */
-}
 
 /* Library Section */
 #library {
@@ -595,7 +641,7 @@ footer {
   font-family: 'Montserrat', sans-serif;
   font-size: 2rem;
   font-weight: 700;
-  color: var(--primary-color);
+  color: white;
   margin-bottom: 20px;
 }
 
@@ -642,7 +688,7 @@ footer {
 
 /* FAQs Section */
 #faqs {
-  background-color: var(--secondary-color);
+  background-color: var(--white);
   padding: 40px 20px;
 }
 
@@ -655,31 +701,27 @@ footer {
 }
 
 .faq-item {
-  background-color: var(--highlight-color);
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
-  margin-bottom: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.faq-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: var(--white);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: var(--soft-shadow);
+    overflow: hidden;
 }
 
 .faq-item h3 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.4rem;
-  color: var(--primary-color);
+    padding: 1.5rem;
+    margin: 0;
+    cursor: pointer;
+    position: relative;
+    font-size: 1.2rem;
+    color: var(--primary-color);
 }
 
+
 .faq-answer {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1rem;
-  color: #666;
-  display: none;
-  margin-top: 10px;
+    padding: 0 1.5rem 1.5rem;
+    color: #666;
+    line-height: 1.6;
 }
 
 /* Workshops Section */
@@ -716,14 +758,6 @@ footer {
   color: #666;
 }
 
-/* Section Headings (General) */
-.section h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--primary-color);
-  margin-bottom: 20px;
-}
 
 /* Hover effects for all clickable elements */
 a:hover,
@@ -757,6 +791,32 @@ a:hover,
 .quote-container cite {
     font-size: 1.1rem;
     font-style: italic;
+}
+.quote-container spline-viewer {
+    width: 100%;
+    height: 400px; /* Increased from default height */
+    margin: 0 auto;
+}
+
+.quote-section {
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+    min-height: 500px; /* Increased to accommodate larger spline */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    .quote-container spline-viewer {
+        height: 300px; /* Slightly smaller for mobile but still prominent */
+    }
+    
+    .quote-section {
+        min-height: 400px;
+    }
 }
 
 /* Articles Section Styles */
@@ -1042,7 +1102,7 @@ spaces/CodeClubWebsite/style.css
 .compact-header {
     display: flex;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
     background: var(--primary-color);
     position: sticky;
     top: 0;
@@ -1050,8 +1110,8 @@ spaces/CodeClubWebsite/style.css
 }
 
 .compact-header .spline-container {
-    width: 200px;  /* Increased from 80px */
-    height: 200px; /* Increased from 80px */
+    width: 150px;  /* Increased from 80px */
+    height: 150px; /* Increased from 80px */
     flex-shrink: 0;
 }
 
@@ -1090,7 +1150,7 @@ spaces/CodeClubWebsite/style.css
     
     .compact-header .spline-container {
         width: 200px;
-        height: 200px;
+        height: 100px;
     }
     
     .compact-header h1 {

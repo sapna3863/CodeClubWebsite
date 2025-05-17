@@ -38,30 +38,46 @@
   });
 
   // FAQ Accordion
-  const faqItems = document.querySelectorAll('.faq-item h3');
-  faqItems.forEach(item => {
-    item.addEventListener('click', () => {
-      const content = item.nextElementSibling;
-      item.classList.toggle('open');
-      content.style.display = content.style.display === 'block' ? 'none' : 'block';
-    });
-  });
-});
-document.addEventListener('DOMContentLoaded', function() {
-    // Add current-page class based on current URL
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-    const navLinks = document.querySelectorAll('nav a');
-    
-    navLinks.forEach(link => {
-        if (link.getAttribute('href') === currentPage) {
-            link.classList.add('current-page');
-        }
-    });
-    
-    // ... rest of your existing script code
-});
-// ...existing code...
+ .faq-item {
+    background-color: var(--white);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: var(--soft-shadow);
+    overflow: hidden;
+}
 
+.faq-item h3 {
+    padding: 1.5rem;
+    margin: 0;
+    cursor: pointer;
+    position: relative;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+.faq-item h3::after {
+    content: '+';
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active h3::after {
+    content: '-';
+}
+
+.faq-answer {
+    padding: 0 1.5rem 1.5rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.faq-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
 // Contact Form Handling
 document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contact-form');
